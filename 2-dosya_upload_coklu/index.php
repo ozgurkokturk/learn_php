@@ -16,7 +16,7 @@
 
 
 <?php
-
+// Eski yöntem bir dosya upload işlemi bunun Array ile olan yönetemi de var.
 if(@$_GET["tercih"]=="yukle"){
     
 
@@ -49,23 +49,23 @@ if(@$_GET["tercih"]=="yukle"){
     }
     else{
         $sayi =  $_POST["sayi"];
-    ?>
-    
-    <div>
-    <form action="index.php?tercih=yukle" method="post" enctype="multipart/form-data">
-    <ol>
-        <?php
-            for($a=1; $a <= $sayi; $a++){
-                echo '<li><input type="file" name="dosya'.$a.'" /> <br /><br /></li>';
-            }
         ?>
-    </ol>
-    <input type="hidden" name="sayi" value="<?php  echo $sayi ?>"  />
-    <input type="submit" name="buton" value="Yükle" />
-    </form>
-    </div>
-    
-    <?php
+        
+        <div>
+        <form action="index.php?tercih=yukle" method="post" enctype="multipart/form-data">
+        <ol>
+            <?php
+                for($a=1; $a <= $sayi; $a++){
+                    echo '<li><input type="file" name="dosya'.$a.'" /> <br /><br /></li>';
+                }
+            ?>
+        </ol>
+        <input type="hidden" name="sayi" value="<?php  echo $sayi ?>"  />
+        <input type="submit" name="buton" value="Yükle" />
+        </form>
+        </div>
+        
+        <?php
     }
     
 
