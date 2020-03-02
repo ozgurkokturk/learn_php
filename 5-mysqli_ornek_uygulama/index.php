@@ -26,7 +26,7 @@ switch ($islem){
   break;
 
   case "guncelle":
-    echo "guncelle basıldı !!!";
+    Islemler::guncelle($db,$id);
   break;
 
 
