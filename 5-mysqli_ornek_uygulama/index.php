@@ -29,6 +29,9 @@ switch ($islem){
     Islemler::guncelle($db,$id);
   break;
 
+  case "arama":
+    Islemler::ara($db);
+  break;
 
   default:
   ?>
@@ -39,6 +42,22 @@ switch ($islem){
     
   <table class="table table-bordered table-hover" style="text-align:center">
     <thead>
+    <tr class="table-light">
+      <th colspan="8">
+        <form action="index.php?islem=arama" method="POST">
+          Aranacak Kriter <select name="kriter">
+            <option value="ad">Ad</option>
+            <option value="soyad">Soyad</option>
+            <option value="tc">TC</option>
+            <option value="meslek">Meslek</option>
+            <option value="aidat">Aidat</option>
+            <option value="yetki">Üye tipi</option>
+          </select>
+          <input type="text" name="ara" placeholder="Aranacak Veri" />
+          <input type="submit" name="fffbuton" value="Ara" />
+        </form>
+      </th>
+    </tr>
       <tr class="table-light">
         <th>Üye id</th>
         <th>Ad</th>
