@@ -24,13 +24,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST["ekle"])){
         $ad_soyad = htmlspecialchars($_POST["ad_soyad"]);
         $bolumu = htmlspecialchars($_POST["bolumu"]);
-        if($ad_soyad != "" || $bolumu != ""){
+        if($ad_soyad != "" && $bolumu != ""){
     
             $ad_soyad = $db->quote($ad_soyad);
             $bolumu = $db->quote($bolumu);
     
             $db->query("INSERT INTO students (ad_soyad, bolumu) VALUES ($ad_soyad, $bolumu)");
             header("refresh:0;url=index.php");
+        }
+        else{
+            echo "all inputs are required";
         }   
     }
     else if(isset($_POST["sil"])){
@@ -39,10 +42,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "KAYIT SİLİNDİ";
         header("refresh:1;url=index.php");
     }
-    
-else{
-    echo "boş geçilemez";
-}
 
 }
 ?>
