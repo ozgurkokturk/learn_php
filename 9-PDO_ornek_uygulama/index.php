@@ -17,40 +17,48 @@ $uye = new Uye();
     }
     table thead{
         color:#DD9D14;
+    }
+    i{
+        color:white;
     }    
 </style>
 <body>
 
-<div class="container-fluid">
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
+<?php
 
-        <div class="col-md-8 mx-auto mt-2" id="ek">
-            <form action="index.php?islem=ekle" method="POST">  
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <input class="form-control" type="text" name="ad" placeholder="Ad" />
-                    </div>
-                    <div class="form-group col-md-6">
-                        <input class="form-control" type="text" name="soyad" placeholder="Soyad" />
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <input class="form-control" type="text" name="yas" placeholder="Yaş" />
-                    </div>
-                    <div class="form-group col-md-6">
-                        <input class="form-control" type="text" name="aidat" placeholder="Aidat" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input class="btn btn-warning col-md-12" type="submit" name="buton" value="Ekle" />
-                </div>
-            </form>
+    @$islem = $_GET["islem"];
+    switch($islem){
+        case "ekle":
+            $uye->ekle($db);
+        break;
+
+        case "sil":
+            $uye->sil($db);
+        break;
+
+        case "guncelleBasla":
+            $uye->guncelleBasla($db);
+        break;
+
+        case "guncelleBitir":
+            $uye->guncelleBitir($db);
+        break;
+
+        default:
+
+?>
+        <div class="col-md-2 mx-auto  mt-4">
+            <a href="index.php?islem=ekle" class="btn btn-success col-md-12 ">Yeni Kayıt Ekle</a>
         </div>
+    <!-- / row -->
+    </div> 
 
 
-        <div class="col-md-8 mx-auto mt-2" id="tablo">
+    <div class="row">
+        <div class="col-md-8 mx-auto mt-4" id="tablo">
             <table class="table table-border table-dark table-bordered text-center table-striped">
                 <thead>
                     <tr>
@@ -70,6 +78,11 @@ $uye = new Uye();
                 </tbody>
             </table>
         </div>
+
+<?php
+;
+ }
+?>
 
 
     </div>
