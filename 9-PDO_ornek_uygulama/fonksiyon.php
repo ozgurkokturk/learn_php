@@ -11,8 +11,23 @@ try  {
 class Uye{
 
 
-    function listele($gelen_db){ // Listele : Default
-        $query = $gelen_db->prepare("SELECT * FROM uyeler");
+	function listele($gelen_db,$kriter){ // Listele : Default
+		if($kriter == "k1"){
+			$query = $gelen_db->prepare("SELECT * FROM uyeler ORDER BY yas DESC");
+		}
+		else if($kriter == "k2"){
+			$query = $gelen_db->prepare("SELECT * FROM uyeler ORDER BY yas ASC");
+		}
+		else if($kriter == "k3"){
+			$query = $gelen_db->prepare("SELECT * FROM uyeler ORDER BY aidat DESC");
+		}
+		else if($kriter == "k4"){
+			$query = $gelen_db->prepare("SELECT * FROM uyeler ORDER BY aidat ASC");
+		}
+		else{
+			$query = $gelen_db->prepare("SELECT * FROM uyeler");
+		}
+
         $query->execute();
         if($query->rowCount() == 0){
             echo '<td colspan="7">Veri tabanı boş</td>';
@@ -34,6 +49,7 @@ class Uye{
         }
 	}
 	
+
 	function ekle($gelen_db){ // Ekle
 		if(isset($_POST["buton"])){
 			$ad = htmlspecialchars($_POST["ad"]);
@@ -83,6 +99,7 @@ class Uye{
 		';
 	}
 
+
 	function sil($gelen_db){ // Sil
 		$id = $_GET["id"];
 		if($id == ""){
@@ -98,7 +115,6 @@ class Uye{
 		}
 		
 	}
-
 
 
 	function guncelleBasla($gelen_db){ // Güncelle Başla
@@ -165,6 +181,7 @@ class Uye{
 			';
 		}
 	}
+
 
 	function guncelleBitir($gelen_db){ // Güncelle Bitir
 		$id = $_POST["id"];

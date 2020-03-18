@@ -20,6 +20,10 @@ $uye = new Uye();
     }
     i{
         color:white;
+    }
+    #sirala{
+        color:white;
+        font-size:20px;
     }    
 </style>
 <body>
@@ -65,15 +69,26 @@ $uye = new Uye();
                         <th>ID</th>
                         <th>Ad</th>
                         <th>Soyad</th>
-                        <th>Yaş</th>
-                        <th>Aidat</th>
+                        <th> <a href="index.php?sirala=k1" id="sirala">+</a> Yaş <a href="index.php?sirala=k2" id="sirala">-</a> </th>
+                        <th><a href="index.php?sirala=k3" id="sirala">+</a> Aidat <a href="index.php?sirala=k4" id="sirala">-</a></th>
                         <th>Güncelle</th>
                         <th>Sil</th>
                     </tr>
                 </thead>
                 <tbody>
                         <?php
-                        $uye->listele($db);
+                         if(isset($_GET["sirala"])){
+                            $sirala = $_GET["sirala"];
+                            if($sirala == ""){
+                                echo "GET EMPTY";
+                            }
+                            else{
+                                $uye->listele($db,$sirala);
+                            }
+                         }
+                         else{
+                             $uye->listele($db,"k0");
+                         }
                         ?>
                 </tbody>
             </table>
@@ -82,6 +97,7 @@ $uye = new Uye();
 <?php
 ;
  }
+
 ?>
 
 
