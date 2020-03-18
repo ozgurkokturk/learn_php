@@ -75,7 +75,7 @@ else{
 ?>
 
 <form action="index.php?tercih=yukle" method="post" enctype="multipart/form-data">
-<input type="text" name="sayi"  />
+<input type="number" name="sayi"  />
 <input type="submit" name="creat" value="Oluştur" />
 </form>
 

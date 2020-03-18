@@ -43,7 +43,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     }
 }else{
-    echo "method problemi !";
+    header("refresh:1;url=giris.php");
+    echo "lütfen bekleyiniz...";
 }
 
 ?>

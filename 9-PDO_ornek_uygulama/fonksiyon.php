@@ -44,18 +44,14 @@ class Uye{
 				echo "<i>biri boş</i>";
 			}
 			else{
-				$i = 0;
-				while($i<50){
-					$i++;
-					$query = $gelen_db->prepare("INSERT INTO uyeler (ad,soyad,yas,aidat) VALUES (?,?,?,?)");
 				
-					$query->bindParam(1,$ad,PDO::PARAM_STR);
-					$query->bindParam(2,$soyad,PDO::PARAM_STR);
-					$query->bindParam(3,$yas,PDO::PARAM_STR);
-					$query->bindParam(4,$aidat,PDO::PARAM_INT);
-					$query->execute();	
-				}
-
+				$query = $gelen_db->prepare("INSERT INTO uyeler (ad,soyad,yas,aidat) VALUES (?,?,?,?)");
+			
+				$query->bindParam(1,$ad,PDO::PARAM_STR);
+				$query->bindParam(2,$soyad,PDO::PARAM_STR);
+				$query->bindParam(3,$yas,PDO::PARAM_STR);
+				$query->bindParam(4,$aidat,PDO::PARAM_INT);
+				$query->execute();	
 				echo "<i>Üye Eklendi<br>Yönlendiriliyorsunuz...</i>";
 				header("refresh:0.5;url=index.php");
 			}
