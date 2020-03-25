@@ -13,6 +13,11 @@ $db = new PDO("mysql:host=localhost;dbname=uyeler;charset=utf8","root");
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
+<style>
+	tbody td{
+		font-size: 10px;
+	}
+</style>
 
 
 
@@ -21,7 +26,7 @@ $(document).ready(function(e){
 	$('#sayi').on('change',function(e){
 
 		var gelenDeger = $("#sayi option:selected").val();
-		alert(gelenDeger);
+		alert(gelenDeger); // kontrol amaçlı kaldırılabilir
 		$.get("cook.php?tercih=belirle",{"limit":gelenDeger},function(){
 			window.location.reload();
 		});
@@ -83,11 +88,17 @@ $(document).ready(function(e){
 					<?php
 					   $pageNumbers = array(5,10,20,30);
 					   foreach($pageNumbers as $value){
-							if($value == $_COOKIE["gosterLimit"]){
-								echo ' <option value="'.$value.'" selected>'.$value.'</option> ';
-							}else{
+							if(!isset($_COOKIE["gosterLimit"])){
 								echo ' <option value="'.$value.'">'.$value.'</option> ';
 							}
+							else{
+								if($value == $_COOKIE["gosterLimit"]){
+									echo ' <option value="'.$value.'" selected>'.$value.'</option> ';
+								}else{
+									echo ' <option value="'.$value.'">'.$value.'</option> ';
+								}
+							}
+
 					   }
 					?>
 				</select>

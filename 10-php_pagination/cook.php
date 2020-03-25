@@ -4,6 +4,4 @@ if(isset($_GET["tercih"])){
       setcookie("gosterLimit", $_GET["limit"]);
    }
 }
-
-
 ?>
