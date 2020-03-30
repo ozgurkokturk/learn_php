@@ -198,9 +198,10 @@ if(isset($_POST["p"])){
         }
         else{
             $product = $query->fetch(PDO::FETCH_OBJ);
+            $product->count = 1; // count'u veritabanı sorgusundan dönen değerin içine gömüyoruz...
+            echo addToCart($product);
         }
-        $product->count = 1; // count'u veritabanı sorgusundan dönen değerin içine gömüyoruz...
-        echo addToCart($product);
+
     }
     else if($islem == "removeFromCart"){
         $id = $_POST["product_id"];
