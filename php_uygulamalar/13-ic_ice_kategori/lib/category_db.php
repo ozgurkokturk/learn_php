@@ -1,7 +1,8 @@
 <?php
 
 require_once "db.php";
-if (isset($_POST["title"])){
+
+if (isset($_POST["title"]) && $_POST["title"] != ""){
 
         $query = $db->prepare("INSERT INTO category SET title = :title, parent_id = :parent_id");
 

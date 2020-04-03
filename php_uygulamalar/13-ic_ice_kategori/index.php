@@ -62,9 +62,13 @@ require_once "lib/functions.php";
             <div class="col-md-11 p-3 bg-light">
                 <h5>Kategori Hiyararşisi</h5>
                 <hr>
-                <pre style="font-size: 12px;">
-                <?php print_r(buildTree($category_list)); ?>
-                </pre>
+
+<!--                <pre>-->
+<!--                    --><?php //print_r(buildTree($category_list));?>
+<!--                </pre>-->
+
+                <?php drawElements(buildTree($category_list)); ?>
+
             </div>
         </div>
 
