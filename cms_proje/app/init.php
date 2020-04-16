@@ -4,14 +4,19 @@
 session_start();
 // ******************
 
+//****** ÇIKTI TAMPONLAMA******
+ob_start();
+// ******************
+
 // ****** classes DİZİNİ ALTINDAKİ SINIFLARI YÜKLE ******
 function loadClasses($className){
     $file =  __DIR__ . "\\classes\\" . strtolower($className) . ".php";
     if (file_exists($file)){
+        echo " Dahil Edilen Class'lar = " . $file . "<br>";
         require $file;
     }
     else{
-        echo "class bulunamadı init.php sayfasına git";
+        echo "class bulunamadı";
     }
 }
 spl_autoload_register("loadClasses");
@@ -28,6 +33,7 @@ try {
 
 // ******  helper DİZİNİ ALTINDAKİ DOSYALRI YÜKLE ******
 foreach (glob( __DIR__ . "\\helper\\*.php") as $helperFile){
+    echo "Dahil edilen helper dosyaları = " . $helperFile . "<br>";
     require $helperFile;
 }
 // *******************************************************
