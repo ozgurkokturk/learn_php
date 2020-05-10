@@ -8,20 +8,34 @@ try {
 }
 
 /*  Ana Sayfa İçin Kullanılan Fonksiyonlar */
-    function showInfos ($db,$id){
+    function showPosts ($db,$userId,$offset,$gosterilecekAdet){
         $query = "SELECT  blog_content.id as blogId, blog_content.title as blogTitle, blog_content.text as blogText, blog_content.tarih as blogTarih, blog_content.labels as blogLabels, blog_content.visibility as blogVisibility, blog_category.title as blogCategoryTitle, blog_user.id as userId, blog_user.user_name as userName, blog_user.password as userPassword, blog_user.email as userEmail, blog_user.yetki as userYetki, blog_user.hakkimda as userHakkimda
                     FROM blog_posts
                     INNER JOIN blog_user ON blog_posts.user_id = blog_user.id
                     INNER join blog_content ON blog_posts.content_id = blog_content.id
                     INNER JOIN blog_category ON blog_category.id = blog_content.category_id
-                    where blog_posts.user_id = ?";
-        $infos = $db->prepare($query);
-        $infos->bindParam(1,$id,PDO::PARAM_STR);
-        $infos->execute();
-        $infos = $infos->fetchAll(PDO::FETCH_OBJ);
-        return $infos;
+                    where blog_posts.user_id = :userId LIMIT :offset,:gosterilecekAdet";
+        $posts = $db->prepare($query);
+
+        // array ile yapamadım int'ler sorun çıkardı galiba...
+        // o yüzden bindParam kullandım.
+        $posts->bindParam(":userId",$userId, PDO::PARAM_INT);
+        $posts->bindParam(":offset",$offset, PDO::PARAM_INT);
+        $posts->bindParam(":gosterilecekAdet",$gosterilecekAdet, PDO::PARAM_INT);
+        $posts->execute();
+        $posts = $posts->fetchAll(PDO::FETCH_OBJ);
+        return $posts;
+    }
+
+
+    // Pagination için toplam kayıt sayısı
+    function rowCount($db,$userId){
+        $query = "SELECT COUNT(id) as sayi from blog_posts where user_id= $userId ";
+        $toplamSatir = $db->query($query,PDO::FETCH_OBJ)->fetch();
+        return $toplamSatir;
 
     }
+
 /*  ...................................... */
 
 

@@ -13,9 +13,9 @@ if (!isset($_SESSION["kadi"])){
     require "../model/database.php";
     global $db;
 
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_POST);
+//    echo "</pre>";
 
     if (isset($_POST["contentId"]) && isset($_POST["selectCategory"]) && isset($_POST["titleContent"]) && isset($_POST["textareaContent"]) && isset($_POST["labelsContent"]) && isset($_POST["dateContent"]) && isset($_POST["radioContent"])) {
         $contentId = htmlspecialchars(trim($_POST["contentId"]));
@@ -38,16 +38,20 @@ if (!isset($_SESSION["kadi"])){
             ":category_id" => $selectCategory
         );
         if ($updateContent->execute($values)){
-            echo "<br><br>GÜNCELLENDİ <br>";
-            echo $contentId ."<br>";
-            echo $titleContent ."<br>";
-            echo $textareaContent ."<br>";
-            echo $dateContent ."<br>";
-            echo $labelsContent ."<br>";
-            echo $radioContent ."<br>";
-            echo $selectCategory ."<br>";
+
+            header("Location:../index.php");
+
+//            echo "<br><br>GÜNCELLENDİ <br>";
+//            echo $contentId ."<br>";
+//            echo $titleContent ."<br>";
+//            echo $textareaContent ."<br>";
+//            echo $dateContent ."<br>";
+//            echo $labelsContent ."<br>";
+//            echo $radioContent ."<br>";
+//            echo $selectCategory ."<br>";
         }else{
-            echo "sorun var!";
+            echo "Karater Sınırlamasını geçmiş olabilirsin... Özellikle başlığın 100 karakteri geçmemesine dikkat et!";
+            echo "<br> <a href='../index.php'>Ana Sayfaya Dönmek İçin Tıkla</a>";
         }
 
 

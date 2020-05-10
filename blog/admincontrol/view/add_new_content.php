@@ -13,12 +13,12 @@ if (!isset($_SESSION["kadi"])){
             <div class="col-lg-10 mb-5 addTextMotherDiv">
                 <h4 id="addTextTitle">İçerik Ekleme Alanı</h4>
 
-                <form action="usage_database/add_new_content.php" method="post">
+                <form action="usage_database/add_new_content.php" id="addNewContent" method="post">
 
                     <div class="form-group row">
                         <label for="" class="col-sm-2 col-form-label ">Kategori:</label>
                         <div class="col-sm-4">
-                            <select name="selectCategory" id="" class="form-control">
+                            <select name="selectCategory" class="form-control">
                                 <option value="0">Seç</option>
                                 <?php foreach ($categories as $category) { ?>
                                     <option data-id="<?php echo $category->id ?>" value="<?php echo $category->id ?>"><?php echo $category->title ?></option>
@@ -94,7 +94,7 @@ if (!isset($_SESSION["kadi"])){
 
                     <div class="text-right">
                         <button type="reset" class="btn btn-secondary">Formu Temizle</button>
-                        <button type="submit" class="btn btn-success">Tüm Formu Kaydet</button>
+                        <button type="submit" id="kaydetBtn" class="btn btn-success">Tüm Formu Kaydet</button>
                     </div>
 
                 </form>

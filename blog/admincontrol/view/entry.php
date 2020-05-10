@@ -1,33 +1,3 @@
-<?php
-
-if (isset($_POST["hidden"])){
-    if (isset($_POST["kadi"]) && isset($_POST["sfr"]) && isset($_POST["control"])){
-        $kadi = trim(htmlspecialchars($_POST["kadi"]));
-        $sfr = trim(htmlspecialchars($_POST["sfr"]));
-        $ctrl = trim(htmlspecialchars($_POST["control"]));
-
-        $info = loginControl($db, $kadi, $sfr);
-        if($info == false){
-            echo "Giriş bilgileri hatalı";
-            header("Refresh: 2; url=index.php");
-        }else{
-            if ($info->email == $kadi && $info->password == $sfr && $ctrl == 5){
-                $_SESSION["id"] = $info->id;
-                $_SESSION["kadi"] = $info->user_name;
-                echo "Giriş Başarılı <br> Yönlendiriliyorsun...";
-                header("refresh:2;url=index.php");
-            }
-            else{
-                echo "Giriş bilgilerinde bir sorun var.";
-                header("refresh:2;url=index.php");
-                session_destroy();
-            }
-        }
-
-    }
-}
-else{ ?>
-
 <!doctype html>
 <html lang="tr">
 <head>
@@ -39,6 +9,15 @@ else{ ?>
     <link rel="stylesheet" href="admin_assets/admin_entry.css">
     <script src="https://kit.fontawesome.com/19bd3d963f.js" crossorigin="anonymous"></script>
     <title>Shhhh</title>
+
+    <script src="admin_assets/js/jquery-3.4.1.min.js"></script>
+    <script src="admin_assets/js/jquery.growl.js"></script>
+    <link rel="stylesheet" href="admin_assets/jquery.growl.css">
+
+    <script src="ajaxes/entry.js"></script>
+
+
+
 </head>
 <body>
 
@@ -46,22 +25,22 @@ else{ ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
-                <form action="" method="POST">
+
+                <form action="usage_database/entry.php" method="POST" id="entryForm">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">K Adi: </label>
+                        <label for="exampleInputEmail1">Kullanıcı Adı: </label>
                         <input class="form-control" id="exampleInputEmail1" type="email" name="kadi" placeholder="Ad" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Şfr: </label>
-                        <input class="form-control" id="exampleInputPassword1" type="password" name="sfr" placeholder="Şfr..." required>
+                        <label for="exampleInputPassword1">Şifre: </label>
+                        <input class="form-control" id="exampleInputPassword1" type="password" name="sfr" required placeholder="Şfr..." >
                     </div>
                     <div class="form-group">
-                        <label> 2 + 2 bazen kaç yapar </label> <input type="number" name="control" required style="width: 40px;">
+                        <label> bil bakalım kaç? </label> <input type="number" name="control"  required style="width: 50px;">
                     </div>
                     <hr>
                     <div class="buton">
-                        <input type="hidden" name="hidden">
-                        <button class="btn btn-secondary" type="submit">Push</button>
+                        <button class="btn btn-secondary" id="entryBtn" type="submit">Go!</button>
                     </div>
                 </form>
 
@@ -71,9 +50,6 @@ else{ ?>
 </div>
 
 
-
 </body>
 </html>
-
-<?php } ?>
 

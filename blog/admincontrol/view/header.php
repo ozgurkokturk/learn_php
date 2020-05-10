@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="../assets/bootstrap.css">
     <link rel="stylesheet" href="admin_assets/admin.css">
 <!--    <script src="https://kit.fontawesome.com/19bd3d963f.js" crossorigin="anonymous"></script>-->
@@ -12,6 +13,10 @@
     <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
 
     <script src="admin_assets/js/jquery-3.4.1.min.js"></script>
+    <script src="admin_assets/js/jquery.growl.js"></script>
+    <link rel="stylesheet" href="admin_assets/jquery.growl.css">
+
+
 
     <!--ckeditor-->
     <script src="../ckeditor/ckeditor.js"></script>

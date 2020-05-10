@@ -79,9 +79,14 @@ nav{
     margin-top: 30px;
 }
 
+.blog-headers{
+    margin-top: 10px;
+}
+
 .blog-content{
     margin-left: 40px;
 }
+
 
 .blog-date{
     min-width: 100px;
@@ -118,6 +123,11 @@ nav{
     text-align: left;
     word-wrap: break-word;
     margin-bottom: 30px;
+
+}
+
+.post-content img{
+    max-width: 100% !important;
 }
 
 .content-labels{
@@ -198,3 +208,7 @@ h2.blog-title{
     font-size: 13px;
 }
 
+/* ***** ANASAYFADAKİ yazı ve tarihler İçin **** */
+.blog-headers{
+    font-size: 14px;
+}

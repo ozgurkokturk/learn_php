@@ -9,6 +9,7 @@ include "../functions.php";
 require "model/database.php";
 global $db;
 
+
 if (isset($_SESSION["kadi"])) {
     if (isset($_GET["url"])){
         $url = $_GET["url"];
@@ -17,6 +18,7 @@ if (isset($_SESSION["kadi"])) {
             case "cikis":
                 include "model/cikis.php";
                 break;
+
 
             case "duzenle":
                 if(isset($_GET["id"])){
@@ -48,12 +50,15 @@ if (isset($_SESSION["kadi"])) {
         }
 
     }else{
-        $infos = showInfos($db,$_SESSION["id"]);
+        // pagination ve normal kayıtlar artık ortak olduğu için
+        // bütün işlemleri pagination.php'de yapıyorum
+        include "usage_database/pagination.php";
+
         include "view/admin_page.php";
     }
 }
 else{
-    include "model/entry.php";
+
     include "view/entry.php";
 }
 

@@ -13,9 +13,10 @@ if (!isset($_SESSION["kadi"])){
     require "../model/database.php";
     global $db;
 
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_POST);
+//    echo "</pre>";
+
 
     if ( isset($_POST["selectCategory"]) && isset($_POST["titleContent"]) && isset($_POST["textareaContent"]) && isset($_POST["labelsContent"]) && isset($_POST["dateContent"]) && isset($_POST["radioContent"])) {
 
@@ -42,22 +43,27 @@ if (!isset($_SESSION["kadi"])){
             $query2 = "INSERT INTO blog_posts (user_id,content_id) VALUES (:user,:content)";
             $add = $db->prepare($query2);
             if ($add->execute(array(":user" => $userId, ":content" => $contenId))) {
-                echo "<br><br> bütün kayıtlar eklendi <br>";
-                echo $titleContent ."<br>";
-                echo $textareaContent ."<br>";
-                echo $dateContent ."<br>";
-                echo $labelsContent ."<br>";
-                echo $radioContent ."<br>";
-                echo $selectCategory ."<br>";
-            } else {
-                echo "blog_posts veri eklenmesi sorunlu!";
+                $response = array(
+                    "state" => "true",
+                    "message" => "Ekleme Başarılı <br> Bekleyiniz...",
+                    "newUrl" => "index.php"
+                );
+
+                echo json_encode($response);
+
+            }
+            else {
+
+                echo "b_posts eklenirken hata oluştu";
             }
 
-        } else {
-            echo "blog_content kaydında sorun çıktı";
         }
-    }else{
-        echo "girmedi";
+        else {
+            echo "b_content'e eklenirken hata oluştu";
+        }
+    }
+    else{
+        echo "POST IF'ine girmedi!";
     }
 
 }

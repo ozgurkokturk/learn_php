@@ -16,7 +16,9 @@
             <i class="fab fa-css3-alt"></i>
             <i class="fab fa-bootstrap"></i>
             <i class="fab fa-php"></i>
+            <img src="assets/bg/icons8-mysql-logo-40.png"/>
             <i class="fab fa-linux"></i>
+
         </div>
     </section>
 
