@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="code/highcharts.js"></script>
+    <script src="code/modules/exporting.js"></script>
+    <script src="code/themes/sand-signika.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+<div id="kapsul" style="width: 100vh; height: 400px; border: 1px solid black;"></div>
+
+
+<script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     var myChart = Highcharts.chart('kapsul', {
+    //         data: {
+    //           table: 'datatable'
+    //         },
+    //         chart: {
+    //             type: 'column'
+    //         },
+    //         title: {
+    //             text: 'Yıl Bazında Ziyaretçi Sayısı'
+    //         },
+    //         xAxis: {
+    //             categories: ['ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran']
+    //         },
+    //         yAxis: {
+    //             title: {
+    //                 text: 'Ziyaretçi Sayısı'
+    //             }
+    //         },
+    //         series: [{
+    //             name: 'Aylar',
+    //             data: [500, 100, 700, 300, 800, 100]
+    //         }]
+    //     });
+    // });
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var myChart = Highcharts.chart('kapsul', {
+            title: {
+                text: 'Yıl Bazında Ziyaretçi Sayısı'
+            },
+            xAxis: {
+                categories: ['ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran']
+            },
+            yAxis: {
+                title: {
+                    text: 'Ziyaretçi Sayısı'
+                }
+            },
+            series: [{
+                name: 'Aylar',
+                data: [500, 490, 700, 600, 800, 750]
+            }]
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
