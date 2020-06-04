@@ -35,5 +35,4 @@ if (isset($_FILES["dosya"])){
     }
 
 
-
 }

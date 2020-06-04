@@ -28,7 +28,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../22-image_crop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,7 +54,9 @@
       <option name="presentableId" value="Default" />
       <updated>1591184183829</updated>
       <workItem from="1591184198638" duration="7730000" />
-      <workItem from="1591250112378" duration="528000" />
+      <workItem from="1591250112378" duration="246000" />
+      <workItem from="1591250647510" duration="6372000" />
+      <workItem from="1591267300036" duration="11152000" />
     </task>
     <servers />
   </component>
