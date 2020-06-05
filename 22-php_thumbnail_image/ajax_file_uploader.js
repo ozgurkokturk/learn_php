@@ -19,9 +19,11 @@ $(document).ready(function () {
                 // // ajax içinde dataType: 'JSON' demezsek bu işlemi yapmak zorundayız.
                 // response = JSON.parse(response);
 
-                $("#myDiv1").html(response["bilgiler"]);
-                $("#myDiv2").html(response["foto"]);
-                $("#myDiv3").html(response["orginalFoto"]);
+                $("#myDiv1").html(response["bilgilerEski"]);
+                $("#myDiv2").html(response["orginalFoto"]);
+                $("#myDiv3").html(response["bilgilerYeni"]);
+                $("#myDiv4").html(response["yeniFoto"]);
+
             }
         });
 
