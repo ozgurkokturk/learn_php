@@ -1,8 +1,9 @@
 <?php
 
-echo "geldi";
 
-if(isset($_GET["islem"]) && $_GET["islem"] == sil){
-    array_map('unlink', glob("dosyalar/*.*"));
-    rmdir("dosyalar");
-}
+
+array_map('unlink', glob("dosyalar/*.*"));
+
+// dosyalar klasörünü siler ama kullanmaktan vazgeçtim.
+//rmdir("dosyalar");
+

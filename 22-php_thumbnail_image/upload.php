@@ -5,6 +5,12 @@ if (isset($_FILES["dosya"])){
 
     if (!file_exists("dosyalar")){
         mkdir("dosyalar");
+    }else{
+        // dosyalar direction'ı zaten varsa içersinideki dosya sayısı 5 ten büyükse sil hepsini
+        $icerisi = glob("dosyalar/*");
+        if (sizeof($icerisi) >= 5){
+            array_map('unlink', glob("dosyalar/*.*"));
+        }
     }
 
 //    echo "<pre>";
@@ -26,7 +32,7 @@ if (isset($_FILES["dosya"])){
     // Dosyanın tipi: image/jpeg
     $type = $_FILES["dosya"]["type"];
 
-    // Değer izin verilen formatlar ARRAY'inde yoksa gelen tür o  zaman durdur
+    // Değer izin verilen formatlar ARRAY'inde yoksa gelen tür, o  zaman durdur
     if (!in_array($type,$izinVeriFormatlar)){
         $response = array("bilgilerEski" => "hata var dosya türü geçersiz <br> sadece jpg, jpeg");
         echo json_encode($response);
@@ -49,6 +55,7 @@ if (isset($_FILES["dosya"])){
         $fullName = $_FILES["dosya"]["name"];
 
 
+        // Dosyanın uzantısını al
         $explodedName = explode(".", $fullName);
         $extension = end($explodedName);
 
@@ -161,8 +168,6 @@ if (isset($_FILES["dosya"])){
         }
 
     }
-
-
 
 
 }
