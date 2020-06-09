@@ -1,6 +1,8 @@
 <?php
 
 
+include "fonksiyonlar.php";
+
 if (isset($_FILES["dosya"])){
 
     if (!file_exists("dosyalar")){
@@ -43,7 +45,9 @@ if (isset($_FILES["dosya"])){
         // Inputlar
         $inputWidth = htmlspecialchars($_POST["inputWidth"]);
         $inputHeight = htmlspecialchars($_POST["inputHeight"]);
-        $dosyaAdi = htmlspecialchars($_POST["dosyaAdi"]);
+        $dosyaAdi = ozelKarakterTemizle(turkcelestir(htmlspecialchars($_POST["dosyaAdi"])));
+
+
 
         // Dosyanın boyutu:  ... byte
         $currentSize = $_FILES["dosya"]["size"];
@@ -52,7 +56,8 @@ if (isset($_FILES["dosya"])){
 
 
         // Doysayın tam adı: asddsaasd.jpg
-        $fullName = $_FILES["dosya"]["name"];
+        $fullName = ozelKarakterTemizle(turkcelestir($_FILES["dosya"]["name"]));
+
 
 
         // Dosyanın uzantısını al
