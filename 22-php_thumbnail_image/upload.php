@@ -99,10 +99,12 @@ if (isset($_FILES["dosya"])){
                     $new_height = $height / ($width / $thumb_width);
                 }
 
+                // Boş bir resim alanı oluşturuyoruz
+                // Yeni oluşacak genişliklerdeki resmi $thumb'a basıcaz.
                 $thumb = imagecreatetruecolor( $thumb_width, $thumb_height );
 
 
-                // Resize and crop
+                // Yeniden boyutlandırma ve kırpma işlemi
                 imagecopyresampled($thumb,
                     $image,
                     0 - ($new_width - $thumb_width) / 2, // Center the image horizontally
