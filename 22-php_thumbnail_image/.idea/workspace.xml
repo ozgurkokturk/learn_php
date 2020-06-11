@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d15d966d-f0a5-4629-8ba9-81074c085a0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../20-sqlite_kullanimi/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/../20-sqlite_kullanimi/mydatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20-sqlite_kullanimi/zaman.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../20-sqlite_kullanimi/zaman.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deleteAll.php" beforeDir="false" afterPath="$PROJECT_DIR$/deleteAll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download.php" beforeDir="false" afterPath="$PROJECT_DIR$/download.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
-    </list>
+    <list default="true" id="d15d966d-f0a5-4629-8ba9-81074c085a0d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +51,7 @@
       <workItem from="1591336833259" duration="18194000" />
       <workItem from="1591547798906" duration="5862000" />
       <workItem from="1591554885568" duration="805000" />
+      <workItem from="1591637594789" duration="240000" />
     </task>
     <servers />
   </component>
@@ -77,9 +71,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="121" key="FileChooserDialogImpl" timestamp="1591554926619">
+    <state x="460" y="121" key="FileChooserDialogImpl" timestamp="1591637833940">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="121" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1591554926619" />
+    <state x="460" y="121" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1591637833940" />
   </component>
 </project>
