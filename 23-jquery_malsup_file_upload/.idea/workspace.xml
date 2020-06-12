@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5aad51c0-28e8-41d7-b6de-60381ba68916" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/araba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/asd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/cars.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/fonksiyonlar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/23-jquery_malsup_file_upload.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/ajax_file_uploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/ajax_file_uploader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/upload.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1d58T4tN1OA0TZlzJAxqL4KVitq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5aad51c0-28e8-41d7-b6de-60381ba68916" name="Default Changelist" comment="" />
+      <created>1591703597866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591703597866</updated>
+      <workItem from="1591703600207" duration="2375000" />
+      <workItem from="1591771607916" duration="7217000" />
+      <workItem from="1591899382577" duration="3110000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: 'upload.php',
-            type:'POST',
+            type: 'POST',
             data: new FormData(this),
             contentType: false,
             processData: false,
