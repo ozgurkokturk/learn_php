@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aad51c0-28e8-41d7-b6de-60381ba68916" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/araba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/asd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/dosyalar/cars.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/fonksiyonlar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/23-jquery_malsup_file_upload.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/ajax_file_uploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/ajax_file_uploader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../22-php_thumbnail_image/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-php_thumbnail_image/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +42,7 @@
       <workItem from="1591703600207" duration="2375000" />
       <workItem from="1591771607916" duration="7217000" />
       <workItem from="1591899382577" duration="3110000" />
+      <workItem from="1591984338954" duration="1404000" />
     </task>
     <servers />
   </component>

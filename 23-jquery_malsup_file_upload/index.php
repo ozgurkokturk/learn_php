@@ -20,6 +20,10 @@
                     uploadProgress: function(event,position,total,percentComplete){
                         $(".progress-bar").width(percentComplete + '%');
                         $(".progress-bar").html(percentComplete + '%');
+                        $("#position").html(Math.round(position / 1024) + ' kb');
+                        $("#total").html(Math.round(total / 1024) + ' kb');
+
+                        
                     },
                     complete: function(cevap) {
                         $(".targetLayer").show();
@@ -50,6 +54,10 @@
                     <div class="progress-bar progress-bar-striped" role="progressbar">
 
                     </div>
+                </div>
+                <br>
+                <div>
+                    <span id="position">0</span> / <span id="total">0</span>
                 </div>
                 <br> <br>
                 <input type="submit" value="Yükle" />
