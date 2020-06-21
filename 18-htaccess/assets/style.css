@@ -1,0 +1,39 @@
+html,body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Tekton Pro Cond";
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+a{
+    color: darkgreen;
+}
+
+
+
+#header{
+    flex: 1;
+}
+
+.kapsul{
+    flex: 8;
+}
+
+#footer{
+    flex: 1;
+    padding: 15px;
+}
+
+
+.big-titles{
+    background-color: darkgoldenrod;
+    text-align: center;
+    color: #dddddd !important;
+}
+
+.big-titles a {
+    color: #dddddd !important;
+}

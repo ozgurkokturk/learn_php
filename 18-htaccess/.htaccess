@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+
+RewriteRule ^([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)/(.*)$ index.php?url=$1&id=$2&baslik=$3
+RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?url=$1
