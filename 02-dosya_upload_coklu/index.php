@@ -78,7 +78,6 @@ else{
 <input type="number" name="sayi"  />
 <input type="submit" name="creat" value="Oluştur" />
 </form>
-
 <?php
 }
 ?>
