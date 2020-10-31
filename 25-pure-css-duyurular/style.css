@@ -1,0 +1,90 @@
+.event-container{
+    font-family: "Roboto", sans-serif ;
+    max-width: 800px;
+    margin: 0 auto;
+
+    /*border: 1px solid red;*/
+    /*padding: 20px;*/
+}
+
+.event-container .event{
+    box-shadow: 0 4px 16px -8px rgba(0,0,0,0.4);
+    display: flex;
+    border-radius: 8px;
+    margin: 32px 0;
+}
+
+.event .event-left{
+    background-color: #222;
+    color: #eee;
+    min-width: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 48px;
+    border-radius: 8px 0 0 8px;
+}
+
+.event .event-left .date{
+    font-size: 56px;
+}
+
+.event .event-left .month{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.event .event-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+}
+
+.event .event-right h3.event-title{
+    font-size: 24px;
+    margin: 24px 0 10px 0;
+    color: #218bbb;
+}
+
+.event .event-right .event-description{
+    font-size: 14px;
+}
+
+.event .event-right .event-timing{
+    background-color: #fff8ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 16px;
+    font-size: 14px;
+    padding: 8px;
+    margin: 24px 0;
+}
+
+.event .event-right .event-timing img{
+    height: 20px;
+    padding-right: 8px;
+}
+
+@media (max-width: 550px) {
+
+    .event-container .event{
+        flex-direction: column;
+    }
+
+    .event .event-left{
+        padding: 10px 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .event .event-left .event-date .date,
+    .event .event-left .event-date .month{
+        display: inline-block;
+        font-size: 24px;
+    }
+    
+}

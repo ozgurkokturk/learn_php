@@ -1,6 +1,6 @@
 <?php
 // Veriler geliyor mu diye kontrol etmek için idi burası.
-//    print_r($todolar);
+// print_r($todolar);
 ?>
 <!doctype html>
 <html lang="tr">
