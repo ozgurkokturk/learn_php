@@ -1,6 +1,6 @@
 <?php
 
-$db = new mysqli("localhost", "root", "", "mysqltarih") or die ("veritabanı hatası");
+$db = new mysqli("localhost:3307", "root", "", "mysqltarih") or die ("veritabanı hatası");
 $db->set_charset("utf8");
 
 function sql ($gelen_db,$gelen_query){
