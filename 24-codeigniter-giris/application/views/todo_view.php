@@ -1,7 +1,11 @@
 <?php
 // Veriler geliyor mu diye kontrol etmek için idi burası.
+<<<<<<< HEAD
     // print_r($todolar);
 	// die();
+=======
+// print_r($todolar);
+>>>>>>> 417e5ee0cf8f3ece53f4f3ecab772899aede9ff3
 ?>
 <!doctype html>
 <html lang="tr">
