@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae0813fb-f930-4e86-96fa-8c6ecb323590" name="Default Changelist" comment="" />
+    <list default="true" id="ae0813fb-f930-4e86-96fa-8c6ecb323590" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../26-pure-css-login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../26-pure-css-login/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../26-pure-css-login-light-mode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -55,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604400953869</updated>
       <workItem from="1604400954917" duration="7646000" />
-      <workItem from="1604490888434" duration="6000" />
+      <workItem from="1604490895784" duration="1147000" />
     </task>
     <servers />
   </component>
@@ -75,10 +77,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1604490893080">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604490893080" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1604408333556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
