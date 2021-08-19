@@ -50,7 +50,7 @@
             <tbody>
             <?php
                 $dosyalar = glob("dosyalar/*.xlsx");
-//                print_r($dosyalar);
+                //print_r($dosyalar);
                 $sayi = 1;
                 foreach ($dosyalar as $dosya){
                     echo '
@@ -64,8 +64,6 @@
                     ';
                 }
             ?>
-
-
             </tbody>
         </table>
     </div>
