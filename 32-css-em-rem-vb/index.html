@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>em ve rem units</title>
+
+    <style>
+
+
+        /* ------------------------------------------------------------------------------ */
+
+        .upper-main{
+            font-size: 20px;
+            background: chocolate;
+            padding: 1rem;
+            width: 50vw;
+        }
+        .upper-main p, .upper-main span{
+            font-size: 1em;
+            background: #eee;
+            padding: 0.5em;
+        }
+        .upper-main img{
+            width: 10em;
+            height: 10em;
+            background: #eeeeee;
+            border-radius: 100px;
+        }
+
+       /* ------------------------------------------------------------------------------ */
+
+        html{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .down-main{
+            background: chocolate;
+            padding: 1rem;
+            width: 50vw;
+        }
+        .down-main p, .down-main span{
+            font-size: 1rem;
+            background: #eee;
+            padding: 0.5rem;
+        }
+        .down-main img{
+            width: 10rem;
+            height: 10rem;
+            background: #eeeeee;
+            border-radius: 100px;
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+<h1>em ve rem Units</h1>
+
+
+<hr>
+
+<div style="text-align: left;">
+    <input type="range" min="10" max="35" step="1" value="20" id="slider" style="width: 50vw;">
+    <p>üst div font-size =  <output id="op">20px</output><p>
+</div>
+
+<div class="upper-main" id="mod">
+    <img src="osk.png" alt="">
+    <span>em birimi üst divin font-size'ına göre oranlı olarak büyür, küçülür.</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, iste?</p>
+
+</div>
+
+<hr>
+
+<div class="down-main">
+    <img src="osk.png" alt="">
+    <span>rem birimi html'in font-size'ına göre oranlı olarak büyür, küçülür.</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, iste?</p>
+</div>
+
+
+
+
+
+
+<div style="background: #cbcfcb; text-align: left; margin-top: 1rem;">
+    <span>
+        Açıklama: <br>
+        em yada rem'in kullanım amacı sitenin font size,margin ve paddinglerinde bir küçülmeye veya büyümeye gidilecekse <br>
+        tek tek değiştirmek yerine em'de üst divi font-size'ını <br>
+        rem'de ise html'in font-size'ını değiştirerek direkt değişiklik uygulanabilir. <br>
+        proje büyüdükçe bunu kullanmak şart.
+    </span>
+</div>
+
+<script>
+    var slider = document.getElementById('slider'),
+        mod = document.getElementById('mod'),
+        op = document.getElementById('op');
+
+    slider.onchange = function () {
+        mod.style.fontSize = this.value + 'px';
+        op.innerHTML = this.value + 'px';
+    }
+</script>
+
+</body>
+</html>
