@@ -26,6 +26,7 @@ namespace PhpOffice\PhpWord\Style;
  */
 final class Language extends AbstractStyle
 {
+
     const EN_US = 'en-US';
     const EN_US_ID = 1033;
 
@@ -73,6 +74,9 @@ final class Language extends AbstractStyle
 
     const RU_RU = 'ru-RU';
     const RU_RU_ID = 1049;
+
+    const TR_TR = 'tr-TR';
+    const TR_TR_ID = 1055;
 
     /**
      * Language ID, used for RTF document generation
